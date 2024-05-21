@@ -8,9 +8,12 @@ const ImageGallery = ({ pictures, openModal }) => {
         <li
           key={id}
           className={css.item}
-          onClick={() => openModal(urls.regular)}
         >
-          <ImageCard url={urls.small} description={alt_description} />
+          <ImageCard
+            url={urls}
+            description={alt_description}
+            openModal={openModal}
+          />
         </li>
       ))}
     </ul>
